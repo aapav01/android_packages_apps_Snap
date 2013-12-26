@@ -2829,7 +2829,8 @@ public class PhotoModule
             mParameters.setColorEffect(colorEffect);
         }
         //Set Saturation
-        if (CameraUtil.isSupported(mParameters, "saturation")) {
+        if (CameraUtil.isSupported(mParameters, "saturation") &&
+                CameraUtil.isSupported(mParameters, "saturation-max")) {
             String saturationStr = mPreferences.getString(
                     CameraSettings.KEY_SATURATION,
                     mActivity.getString(R.string.pref_camera_saturation_default));
@@ -2840,7 +2841,8 @@ public class PhotoModule
             }
         }
         // Set contrast parameter.
-        if (CameraUtil.isSupported(mParameters, "contrast")) {
+        if (CameraUtil.isSupported(mParameters, "contrast") &&
+                CameraUtil.isSupported(mParameters, "contrast-max")) {
             String contrastStr = mPreferences.getString(
                     CameraSettings.KEY_CONTRAST,
                     mActivity.getString(R.string.pref_camera_contrast_default));
@@ -2851,7 +2853,8 @@ public class PhotoModule
             }
         }
         // Set sharpness parameter
-        if (CameraUtil.isSupported(mParameters, "sharpness")) {
+        if (CameraUtil.isSupported(mParameters, "sharpness") &&
+                CameraUtil.isSupported(mParameters, "sharpness-max")) {
             String sharpnessStr = mPreferences.getString(
                     CameraSettings.KEY_SHARPNESS,
                     mActivity.getString(R.string.pref_camera_sharpness_default));
