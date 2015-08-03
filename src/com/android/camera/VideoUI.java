@@ -232,8 +232,8 @@ public class VideoUI implements PieRenderer.PieListener,
         });
 
         initializeMiscControls();
-        initializeControlByIntent();
         initializeOverlay();
+        initializeControlByIntent();
         initializePauseButton();
         mAnimationManager = new AnimationManager();
         mOrientationResize = false;
